@@ -15,19 +15,25 @@ $(document).ready(function () {
                 const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 const isDay = weatherData.is_day ? "Day" : "Night"; // Is it day or night?
 
-                if (isDay == "Day"){
+                // Adjust background and image based on day or night
+                if (isDay === "Day") {
                     $('#img').attr('src', 'Vector.svg'); 
-                }
-                else{
+                    $('body').css({
+                        'background': 'linear-gradient(64deg, #DA7211 0%, rgba(253, 245, 47, 0.99) 125.58%)', 
+                    });
+                    $('.container').css({
+                        'background-color': 'rgba(218, 114, 17, 0.7)',
+                    });
+                } else {
                     $('#img').attr('src', 'Group 13.svg'); 
-                    $('body').css({      
-                        'background-color': 'background: var(--bg, linear-gradient(64deg, #05159E 0%, #D7FDFF 125.57%, #84D3FF 125.58%));', 
+                    $('body').css({
+                        'background': 'linear-gradient(64deg, #05159E 0%, #D7FDFF 125.57%, #84D3FF 125.58%)', 
                     });
-                    $('.container').css({      
-                        'background-color': 'rgba(26, 55, 198, 0.7);', 
+                    $('.container').css({
+                        'background-color': 'rgba(26, 55, 198, 0.7)', 
                     });
-
                 }
+
                 // Display data in HTML
                 $('#temp').text(`${temperature}°C`);
                 $('#wind').text(`${windSpeed} km/h`);
@@ -40,8 +46,7 @@ $(document).ready(function () {
                 $('#temp').text("Error retrieving temperature data.");
                 $('#wind').text("");
                 $('#map').text("");
-                $('#day').text('')
-
+                $('#day').text('');
             });
     }
 
