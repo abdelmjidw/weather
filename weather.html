@@ -11,20 +11,33 @@
 <body>
     <div class="container">
         <div>
-            <h1>Sunny</h1>
-            <img src="Vector.svg" alt="">
+            <h1 id="map">...</h1>
+            <img id="img" src="" alt="">
         </div>
         <div class="khat"></div>
         <div class="right">
             <div>
-                <h1 class="city">New York, USA</h1>
-                <h1>Tuesday</h1>
+                <select id="city">
+                    <option value="30.428246158444956, -9.59369220759621">Agadir, MAR</option>
+                    <option value="40.71025519641053, -74.00964203533962">New York, USA</option>
+                    <option value="40.41117876780771, -3.7076692919264014">Madrid, ESP</option>
+                    <option value="48.85873742558746, 2.3360658900206035">Paris, FRA</option>
+                    <option value="48.856478593269, 2.342932344757781">London, ENG</option>
+                </select>
+                <h1 id="day">...</h1>
             </div>
-            <h1 class="number">
-                32°
-            </h1>
+            <div>
+                <h1 class="harara" id="temp">
+                    ...
+                </h1>
+                <h1 class="riya7" id="wind">...</h1>
+            </div>
+
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
